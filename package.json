@@ -9,5 +9,11 @@
     "mongoose": "~3.6.20",
     "passport": "~0.1.17",
     "passport-local": "~0.1.6"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-express": "~1.2.0",
+    "pow-mongoose-fixtures": "~0.3.0"
   }
 }

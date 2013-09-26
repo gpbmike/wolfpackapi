@@ -3,9 +3,9 @@ module.exports = function (app) {
       mongoose = restful.mongoose;
 
   var positionSchema = mongoose.Schema({
-    _id  : Number,
+    _id  : mongoose.Schema.Types.ObjectId,
     name : String,
-    sport: { type: Number, ref: 'sport' }
+    sport: { type: mongoose.Schema.Types.ObjectId, ref: 'sport' }
   });
 
   var position = restful.model('position', positionSchema).methods(['get', 'post', 'put', 'delete']);

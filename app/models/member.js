@@ -3,9 +3,9 @@ module.exports = function (app) {
       mongoose = restful.mongoose;
 
   var memberSchema = mongoose.Schema({
-    _id     : Number,
-    team    : { type: Number, ref: 'team' },
-    user    : { type: Number, ref: 'user' },
+    _id     : mongoose.Schema.Types.ObjectId,
+    team    : { type: mongoose.Schema.Types.ObjectId, ref: 'team' },
+    user    : { type: mongoose.Schema.Types.ObjectId, ref: 'user' },
     position: [{ type: mongoose.Schema.Types.ObjectId, ref: 'position' }]
   });
 

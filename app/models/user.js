@@ -3,7 +3,7 @@ module.exports = function (app) {
       mongoose = restful.mongoose;
 
   var userSchema = mongoose.Schema({
-    _id      : Number,
+    _id      : mongoose.Schema.Types.ObjectId,
     firstName: String,
     lastName : String,
     email    : String,

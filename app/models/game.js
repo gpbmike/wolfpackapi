@@ -3,13 +3,13 @@ module.exports = function (app) {
       mongoose = restful.mongoose;
 
   var gameSchema = mongoose.Schema({
-    _id      : Number,
+    _id      : mongoose.Schema.Types.ObjectId,
     gameTime : String,
-    homeTeam : { type: Number, ref: 'team' },
-    awayTeam : { type: Number, ref: 'team' },
+    homeTeam : { type: mongoose.Schema.Types.ObjectId, ref: 'team' },
+    awayTeam : { type: mongoose.Schema.Types.ObjectId, ref: 'team' },
     scoreHome: String,
     scoreAway: String,
-    winner   : { type: Number, ref: 'team' }
+    winner   : { type: mongoose.Schema.Types.ObjectId, ref: 'team' }
   });
 
   var game = restful.model('game', gameSchema).methods(['get', 'post', 'put', 'delete']);

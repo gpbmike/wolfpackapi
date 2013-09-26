@@ -3,7 +3,7 @@ module.exports = function (app) {
       mongoose = restful.mongoose;
 
   var sportSchema = mongoose.Schema({
-    _id      : Number,
+    _id      : mongoose.Schema.Types.ObjectId,
     name     : String,
     positions: [{ type: mongoose.Schema.Types.ObjectId, ref: 'position' }]
   });
